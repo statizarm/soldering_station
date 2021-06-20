@@ -1,0 +1,12 @@
+Board Information Report
+Filename     : C:\Users\art_home\university\bachelor\Art\ύλ. ÿχεικΰ\control_block.PcbDoc
+Date         : 04.11.2020
+Time         : 15:37:31
+Time Elapsed : 00:00:00
+
+Routing Information
+    Routing completion, 100,00%
+    Connections, 88
+    Connections routed, 88
+    Connections remaining, 0
+count : 4

@@ -1,0 +1,157 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.29.0.0
+Copyright (C) 2019 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Artemiy Shushuev, none, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.29.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.29.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.7.0
+Dialog DLL:      TCM.DLL V1.36.5.0
+ 
+<h2>Project:</h2>
+C:\Users\art_home\university\bachelor\Art\firmware\actual\soldering_station.uvprojx
+Project File Date:  06/16/2021
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Rebuild target 'Target 1'
+compiling font.c...
+font.c(38): warning:  #111-D: statement is unreachable
+  					break;
+font.c(51): warning:  #1-D: last line of file ends without a newline
+  }
+font.c: 2 warnings, 0 errors
+compiling frame.c...
+frame.c(7): warning:  #1296-D: extended constant initialiser used
+  	.cs = (uint32_t *) (PERIPH_BB_BASE + ((uint32_t)&GPIOB->ODR - PERIPH_BASE) * 32 + 48),
+frame.c(8): warning:  #1296-D: extended constant initialiser used
+  	.dc = (uint32_t *) (PERIPH_BB_BASE + ((uint32_t)&GPIOB->ODR - PERIPH_BASE) * 32 + 40),
+frame.c(9): warning:  #1296-D: extended constant initialiser used
+  	.reset = (uint32_t *) (PERIPH_BB_BASE + ((uint32_t)&GPIOB->ODR - PERIPH_BASE) * 32 + 44),
+frame.c: 3 warnings, 0 errors
+compiling application.c...
+application.h(4): warning:  #1295-D: Deprecated declaration init_app - give arg types
+  void init_app();
+application.h(5): warning:  #1295-D: Deprecated declaration start_app - give arg types
+  void start_app();
+application.h(7): warning:  #1295-D: Deprecated declaration sleep_app - give arg types
+  void sleep_app();
+application.h(8): warning:  #1295-D: Deprecated declaration unsleep_app - give arg types
+  void unsleep_app();
+global.h(22): warning:  #1-D: last line of file ends without a newline
+  #endif // GLOBAL_H_
+application.c: 5 warnings, 0 errors
+compiling global.c...
+compiling ili9341_driver.c...
+compiling init.c...
+compiling main.c...
+application.h(4): warning:  #1295-D: Deprecated declaration init_app - give arg types
+  void init_app();
+application.h(5): warning:  #1295-D: Deprecated declaration start_app - give arg types
+  void start_app();
+application.h(7): warning:  #1295-D: Deprecated declaration sleep_app - give arg types
+  void sleep_app();
+application.h(8): warning:  #1295-D: Deprecated declaration unsleep_app - give arg types
+  void unsleep_app();
+main.c: 4 warnings, 0 errors
+compiling Roboto Mono Medium24.c...
+compiling Roboto Mono Medium64.c...
+compiling sem.c...
+sem.c(10): warning:  #3731-D: intrinsic is deprecated
+  		for (val = __ldrex(&sem->value); val == 0; val = __ldrex(&sem->value)) {
+sem.c(10): warning:  #3731-D: intrinsic is deprecated
+  		for (val = __ldrex(&sem->value); val == 0; val = __ldrex(&sem->value)) {
+sem.c(17): warning:  #3731-D: intrinsic is deprecated
+  	} while(__strex(val, &sem->value) == 1);
+sem.c(24): warning:  #3731-D: intrinsic is deprecated
+  		val = __ldrex(&sem->value);
+sem.c(26): warning:  #3731-D: intrinsic is deprecated
+  	} while (__strex(val, &sem->value) == 1);
+sem.c: 5 warnings, 0 errors
+compiling regulator.c...
+compiling semc.c...
+compiling temperature.c...
+temperature.h(7): warning:  #1295-D: Deprecated declaration init_temperature_calibration - give arg types
+  void init_temperature_calibration();
+temperature.h(20): warning:  #1-D: last line of file ends without a newline
+  #endif // TEMPERATURE_H_
+temperature.c: 2 warnings, 0 errors
+assembling startup_stm32f10x_md.s...
+compiling task.c...
+global.h(22): warning:  #1-D: last line of file ends without a newline
+  #endif // GLOBAL_H_
+temperature.h(7): warning:  #1295-D: Deprecated declaration init_temperature_calibration - give arg types
+  void init_temperature_calibration();
+temperature.h(20): warning:  #1-D: last line of file ends without a newline
+  #endif // TEMPERATURE_H_
+task.c(77): warning:  #3731-D: intrinsic is deprecated
+  		bt = (struct __queue_chunk *) __ldrex(&_task_queue.buf_top);
+task.c(79): warning:  #3731-D: intrinsic is deprecated
+  	} while (__strex((unsigned int) (bt + 1), &_task_queue.buf_top));
+task.c(91): warning:  #3731-D: intrinsic is deprecated
+  		bt = (struct __queue_chunk *) __ldrex(&_task_queue.buf_top);
+task.c(99): warning:  #3731-D: intrinsic is deprecated
+  	} while (__strex((unsigned int) bt, &_task_queue.buf_top));
+task.c(107): warning:  #3731-D: intrinsic is deprecated
+  		bt = (struct __queue_chunk *) __ldrex(&_task_queue.buf_top);
+task.c(108): warning:  #3731-D: intrinsic is deprecated
+  	} while (__strex((unsigned int) (bt - 1), &_task_queue.buf_top)); 
+task.c: 9 warnings, 0 errors
+compiling ui.c...
+global.h(22): warning:  #1-D: last line of file ends without a newline
+  #endif // GLOBAL_H_
+temperature.h(7): warning:  #1295-D: Deprecated declaration init_temperature_calibration - give arg types
+  void init_temperature_calibration();
+temperature.h(20): warning:  #1-D: last line of file ends without a newline
+  #endif // TEMPERATURE_H_
+ui.c: 3 warnings, 0 errors
+compiling system_stm32f10x.c...
+linking...
+Program Size: Code=9928 RO-data=7952 RW-data=1224 ZI-data=2168  
+".\Objects\soldering_station.axf" - 0 Error(s), 33 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.6.0.pack
+                ARM.CMSIS.5.6.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.3.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F1xx_DFP.2.3.0.pack
+                Keil.STM32F1xx_DFP.2.3.0
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 1.0.0
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\Device\STM32F103C8
+  .\RTE\_Target_1
+  C:\Users\art_home\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include
+  C:\Users\art_home\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.3.0
+
+   * Component: Keil::Device:Startup:1.0.0
+      Source file:   Device\Source\ARM\startup_stm32f10x_md.s
+      Include file:  RTE_Driver\Config\RTE_Device.h
+      Source file:   Device\Source\ARM\STM32F1xx_OPT.s
+      Source file:   Device\Source\system_stm32f10x.c
+Build Time Elapsed:  00:00:03
+</pre>
+</body>
+</html>

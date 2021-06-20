@@ -1,0 +1,21 @@
+--cpu Cortex-M3
+".\objects\main.o"
+".\objects\init.o"
+".\objects\ili9341_driver.o"
+".\objects\task.o"
+".\objects\sem.o"
+".\objects\global.o"
+".\objects\frame.o"
+".\objects\ui.o"
+".\objects\temperature.o"
+".\objects\regulator.o"
+".\objects\application.o"
+".\objects\font.o"
+".\objects\roboto mono medium24.o"
+".\objects\roboto mono medium64.o"
+".\objects\semc.o"
+".\objects\startup_stm32f10x_md_vl.o"
+".\objects\system_stm32f10x.o"
+--ro-base 0x08000000 --entry 0x08000000 --rw-base 0x20000000 --entry Reset_Handler --first __Vectors --strict --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\soldering_station_firmware.map" -o .\Objects\soldering_station_firmware.axf
